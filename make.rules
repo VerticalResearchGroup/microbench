@@ -1,0 +1,34 @@
+include ../make.config
+
+CC?=gcc
+OPT?=-O3
+MAGIC?=-DMAGIC
+
+#-fno-tree-vectorize 
+CFLAGS+=${OPT} ${MAGIC} -I../
+
+
+
+all: test
+
+
+ifneq ("$(wildcard rand_arr_args.txt)","")
+args := $(shell cat rand_arr_args.txt)
+
+randArr.h: rand_arr_args.txt
+	${PY} ../rand_c_arr.py $(args)
+
+pre_req: randArr.h 
+else
+pre_req:
+endif
+
+test: test.c pre_req
+	${CC} ${CFLAGS} test.c --static --std=c99  -lm -o test
+
+clean:
+	rm -f test 
+
+.phony : clean all
+
+
