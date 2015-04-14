@@ -1,0 +1,1 @@
+L2 Resident linked list traversal -- B/W limited (loads)

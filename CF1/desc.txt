@@ -1,0 +1,1 @@
+Inlining Test for functions containing loops.

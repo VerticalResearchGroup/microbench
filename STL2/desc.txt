@@ -1,0 +1,1 @@
+Repeatedly store, L2 Cache Resident

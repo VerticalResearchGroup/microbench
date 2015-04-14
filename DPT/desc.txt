@@ -1,0 +1,1 @@
+Simple Data Parallel Loop -- sin() computation

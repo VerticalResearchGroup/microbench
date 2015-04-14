@@ -1,0 +1,1 @@
+8 Streams independent Memory Access -- 2 coalescing ops per iteration

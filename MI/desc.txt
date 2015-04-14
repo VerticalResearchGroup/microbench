@@ -1,0 +1,1 @@
+8 Streams of independent memory access, all cache resident.
