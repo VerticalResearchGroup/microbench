@@ -8,8 +8,7 @@ MAGIC?=-DMAGIC
 CFLAGS+=${OPT} ${MAGIC} -I../
 
 
-
-all: test
+all: bench
 
 
 ifneq ("$(wildcard rand_arr_args.txt)","")
@@ -23,11 +22,11 @@ else
 pre_req:
 endif
 
-test: test.c pre_req
-	${CC} ${CFLAGS} test.c --static --std=c99  -lm -o test
+bench: bench.c pre_req
+	${CC} ${CFLAGS} bench.c --static --std=c99  -lm -o bench
 
 clean:
-	rm -f test 
+	rm -f bench
 
 .phony : clean all
 
