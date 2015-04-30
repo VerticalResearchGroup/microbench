@@ -27,3 +27,7 @@ Run a benchmark: (no args on any current benchmark)
 
 Tony Nowatzki
 Tuesday, April 14th, 2015
+
+PS: Also, some benchmarks use an LFSR setting to get a particular working set.
+Please see lfsr_settings.txt for example values. (bench ML2 uses this)
+
